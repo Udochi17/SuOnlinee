@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* .roead {
+    background: linear-gradient(#003333, #339999, #66cccc,
+            #07301a, #02824f, #027c68,
+            #2c8769, #023d54, #359a8d);
+}
+
+
+.photo-gallery-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+}
+
+.pic-div-container {
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+}
+
+.pic-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.pic-div-container::before {
+    content: "SUCF";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+
+.pic-div-container::after {
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 0;
+    background-color: #00000066;
+    transition: .3s;
+}
+
+.pic-div-container:hover::after {
+    height: 100%;
+}
+
+.pic-div-container:hover::before {
+    margin-top: 0;
+    opacity: 0.8;
+} */
+
+@layer components {
+    .img-transit {
+        @apply before:content-['SUCF'] before:absolute before:top-[50%] before:left-[50%] before:-translate-[50%] before:text-white before:text-center before:w-full before:text-2xl before:font-bold after:content-[''] after:w-full after:h-full after:left-0 after:absolute after:bottom-0 after:bg-[#00000c66] after:rounded-[3px] before:z-[1]
+    }
+
+    .ham-apply {
+        @apply before:content-[''] before:rounded before:absolute before:bg-white before:w-8 before:h-1 before:-translate-x-4 before:translate-y-[10px] before:transition-all before:delay-[0.05s] after:content-[''] after:rounded after:absolute after:bg-white after:w-8 after:h-1 after:-translate-x-4 after:-translate-y-[10px] after:transition-all after:delay-[0.05s]
+    }
+
+}
+
+@layer utilities {
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent
+    }
+}
