@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-.roead {
+/* .roead {
     background: linear-gradient(#003333, #339999, #66cccc,
             #07301a, #02824f, #027c68,
             #2c8769, #023d54, #359a8d);
@@ -65,7 +65,7 @@
 .pic-div-container:hover::before {
     margin-top: 0;
     opacity: 0.8;
-}
+} */
 
 @layer components {
     .img-transit {
